@@ -6,7 +6,13 @@ import EventCard from '../components/EventCard.vue'
 const events = ref(null)
 
 onMounted(() => {
-  axios.get('https://my-json-server.typicode.com/agussalberdi/real-world-vue');
+  axios.get('https://my-json-server.typicode.com/agussalberdi/real-world-vue/events')
+  .then((res) => {
+    console.log(res);
+  })
+  .catch(err => {
+    console.log(err);
+  })
 })
 </script>
 
