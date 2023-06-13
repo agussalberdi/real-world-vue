@@ -1,9 +1,13 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import axios from 'axios';
 import EventCard from '../components/EventCard.vue'
 
 const events = ref(null)
+
+onMounted(() => {
+  axios.get('https://my-json-server.typicode.com/agussalberdi/real-world-vue');
+})
 </script>
 
 <template>
